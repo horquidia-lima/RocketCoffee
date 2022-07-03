@@ -1,0 +1,238 @@
+/*-------general styles------*/
+
+:root {
+    --background: #000;
+    --text-color: #FFF;
+    --button: #8257E5;
+    --border: #29292E;
+    --border-menu-mobile: #A8A8B3;
+    --text-color-menu-mobile: #E1E1E6;
+
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.6rem;
+
+    background: var(--background);
+    color: var(--text-color);
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+img {
+    max-width: 100%;
+}
+
+.container header{
+    /*margin-inline: 250px*/
+    width: 80%;
+    max-width: 980px;
+    margin: auto;
+}
+
+/*-------header styles------*/
+
+#menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 5rem;
+}
+
+#menu nav ul{
+    display: flex;
+    list-style: none;  
+}
+
+#menu nav ul li{
+    margin-left: 3.243rem;
+    line-height: 1.9rem;
+    letter-spacing: 0.02em;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+#getMyCoffee{
+    border: 1px solid var(--button);
+    border-radius: 0.6rem;
+    padding: 1.1rem 3.8rem;
+    line-height: 1.5rem;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+/*-------main styles------*/
+
+main #text-span{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    margin-top: 4rem;
+}
+
+span{
+    text-align: center;
+    font-weight: 700;
+    font-size: 8rem;
+    line-height: 109px;
+    letter-spacing: -0.03rem;
+}
+
+main #text-span span:nth-of-type(2){
+    color: #8257E5;
+    text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+
+main > img {
+    display: block;
+    margin: 0 auto;
+}
+
+#getMyCoffeeTwo, 
+#titleHeader, 
+#logoMobile,
+.menu-toggle{
+    display: none;
+}
+
+
+/*#blurRight{
+    position: absolute;
+    width: 321px;
+    height: 321px;
+    left: 1027px;
+    top: -63px;   
+}
+
+#blurLeft{
+    position: absolute;
+    width: 321px;
+    height: 321px;
+    left: -29px;
+    top: 495px;
+}*/
+
+/*-------responsive styles------*/
+
+.menu-section.on {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: var(--background);
+
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-section.on nav ul {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    padding-block: 10px;
+}
+
+.menu-section.on nav {
+    display: block;
+}
+
+.menu-section.on nav ul li{
+    padding-block: 2rem;
+    color: var(--text-color-menu-mobile);
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+}
+
+.menu-section.on .menu-toggle {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+}
+
+@media (max-width: 872px) {
+    #menu nav ul li{
+        font-size: 1.2rem;
+    }
+
+    #getMyCoffee{
+        padding: 1.1rem 2.3rem;
+    }
+}
+
+@media (max-width: 784px){
+    #getMyCoffee{
+        display: none;
+    }
+
+    #getMyCoffeeTwo{
+        display: block;
+        margin: 2rem auto;
+        padding: 1rem 1rem;
+        width: 17.3rem;
+        border: 1px solid var(--button);
+        border-radius: 0.6rem;
+        font-size: 1.1rem;
+        font-weight: 800;
+    }
+
+    span{
+        font-size: 6rem;
+    }
+
+    #menu nav ul li{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 643px){
+    #titleHeader{
+        display: block;
+        width: 37.3rem;
+        height: 12.8rem;
+        margin: 7.8rem auto;
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 4.1rem;
+        letter-spacing: 0.02em;
+    }
+
+    nav,#logoDesktop {
+        display: none;
+    }
+
+    #logoMobile, .menu-toggle{
+        display: block;
+    }
+
+    @media (max-width: 438px){
+        span{
+            font-size: 4rem;
+        }
+    }
+
+}
+
